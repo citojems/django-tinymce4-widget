@@ -3,5 +3,6 @@ mock
 django-filebrowser-no-grappelli
 Pillow
 Sphinx
+sphinx_rtd_theme
 flake8
 coverage
