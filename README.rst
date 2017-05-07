@@ -1,4 +1,4 @@
-django-tinymce4-widget
+Django TinyMCE4 Widget
 ======================
 
 .. image:: https://travis-ci.org/browniebroke/django-tinymce4-widget.svg?branch=master
@@ -9,79 +9,24 @@ django-tinymce4-widget
     :target: http://django-tinymce4-widget.readthedocs.io/en/latest/?badge=latest
 .. image:: https://badge.fury.io/py/django-tinymce4-widget.svg
     :target: https://badge.fury.io/py/django-tinymce4-widget
+.. image:: https://img.shields.io/pypi/pyversions/django-tinymce4-widget.svg
+    :target: https://pypi.python.org/pypi/django-tinymce4-widget
 
-**django-tinymce4-widget** is a reworked fork of `django-tinymce4-lite`_. It provides a minimal `TinyMCE 4`_
+**django-tinymce4-widget** is a reworked fork of `django-tinymce4-lite`_. It provides a minimal TinyMCE 4
 editor widget that can be used in Django forms.
-The application can use `django-filebrowser`_ or `django-filebrowser-no-grappelli`_
-as a file manager for TinyMCE 4 to insert images and file links into edited text.
 
 This version **does not** include any static files, it's using the TinyMCE `from the CDN`_ by default. 
-As compared to the original fork, this package provides Django 1.7 support.
+As compared to the original fork, this package support Django from 1.7 to 1.11.
 
-**Warning**: TinyMCE 4 is incompatible with TinyMCE 3. Read `TinyMCE docs`_ for more information
-about how to configure TimyMCE 4 editor widget.
-
-Compatibility
--------------
-
-- **Python**: 2.7, 3.4, 3.5, 3.6
-- **Django**: 1.7-1.11
-
-Quick Start
-===========
-
-Install **django-tinymce4-widget**::
-
-  $ pip install django-tinymce4-widget
-
-Add ``tinymce`` to ``INSTALLED_APPS`` in ``settings.py`` for your Django project:
-
-.. code-block:: python
-
-  INSTALLED_APPS = (
-      ...
-      'tinymce',
-  )
-
-Add ``tinymce.urls`` to ``urls.py`` for your project:
-
-.. code-block:: python
-
-  urlpatterns = [
-      ...
-      url(r'^tinymce/', include('tinymce.urls')),
-      ...
-  ]
-
-In your code:
-
-.. code-block:: python
-
-    from django.db import models
-    from tinymce import HTMLField
-
-    class MyModel(models.Model):
-        ...
-        content = HTMLField('Content')
-
-In Django Admin the widget is used automatically for all models that have ``HTMLField`` fields.
-If you are using TinyMCE 4 in your website forms, add ``form.media`` variable into your templates:
-
-.. code-block:: django
-
-  <!DOCTYPE html>
-  <html>
-  <head>
-    ...
-    {{ form.media }}
-  </head>
-  <body>
-  ...
-  </body>
-  </html>
-
+.. warning::
+  TinyMCE 4 is incompatible with TinyMCE 3. Read `TinyMCE docs`_ for more information
+  about how to configure TimyMCE 4 editor widget.
 
 Documentation
 =============
 
 The full documentation is available at http://django-tinymce4-widget.readthedocs.io/en/latest/
+
+.. _django-tinymce4-lite: https://github.com/romanvm/django-tinymce4-lite
+.. _from the CDN: https://cloud.tinymce.com/stable/tinymce.min.js
+.. _TinyMCE docs: https://www.tinymce.com/docs/

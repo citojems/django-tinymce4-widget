@@ -5,7 +5,7 @@ Install **django-tinymce4-widget** from PyPI::
 
   $ pip install django-tinymce4-widget
 
-Add ``tinymce`` to ``INSTALLED_APPS`` in ``settings.py`` for your Django project:
+Add ``tinymce`` to ``INSTALLED_APPS`` in your project's ``settings.py``:
 
 .. code-block:: python
 
@@ -24,6 +24,8 @@ Add ``tinymce.urls`` to ``urls.py`` for your project:
       ...
   ]
 
+Optional
+--------
 
 If you want to use `django-filebrowser`_ or `django-filebrowser-no-grappelli`_ file manager,
 install one of those packages. Refer to `django-filebrowser documentation`_ to learn
